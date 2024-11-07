@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>Login</h2>
+<mat-dialog-content class="mat-typography container">
+    @if(this.value === 0 || this.value === 1 || this.value === 2){
+    <p>Email</p>
+    <mat-form-field class="form-full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput [(ngModel)]="email" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+        @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+        <mat-error>Please enter a valid email address</mat-error>
+        }
+        @if (emailFormControl.hasError('required')) {
+        <mat-error>Email is <strong>required</strong></mat-error>
+        }
+    </mat-form-field>
+    }
+    @if(this.value=== 0){
+        <p>Password</p>
+    <mat-form-field class="form-full-width" style="margin-bottom: 0px;"> 
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="password" [value]="password" [type]="hide() ? 'password' : 'text'">
+        <button
+      mat-icon-button
+      matSuffix
+      (click)="clickEvent($event)"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide()"
+    >
+      <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    </mat-form-field>
+    }
+    @if (this.value === 3){
+      <p>  A link to reset your password has been emailed to you.</p> 
+    }
+    <a href="javascript:void(0)" *ngIf="this.value!==3" (click)="resetPassword()" class="reset-password">Forgot Password</a>
+    <div [ngSwitch]="this.value">
+        <button mat-button *ngSwitchCase=1 class="login-button" (click) ="sendResetLink()"><span>Send Reset Email</span></button>
+        <button mat-button *ngSwitchCase=2 class="login-button" ><mat-spinner diameter="25" color="white"></mat-spinner></button>
+        <button mat-button *ngSwitchCase=3 class="login-button" (click)="this.value=0" (click)="this.passwordReset=false"><span>Back To Login</span></button>
+        <button mat-button *ngSwitchDefault class="login-button" (click) ="email && password && login()"><span>Log In</span></button>
+        <!-- <span *ngIf="this.passwordReset === true">{{this.passwordReset ? 'Reset Password': 'Log In'}}</span> -->
+    </div>
+    <a href="javascript:void(0)" (click)="createAccount()" class="create-account">Create Account</a>
+</mat-dialog-content>
+

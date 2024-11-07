@@ -1,0 +1,23 @@
+
+@if (!signedIn){
+    <button mat-button (click)="signIn( '750ms','0ms')">
+        Log In
+    </button>
+    <button mat-flat-button style="background-color: #364B61; color:white; margin: 5px"> Create Account <mat-icon iconPositionEnd>arrow_right_alt</mat-icon></button>
+}
+
+@if(signedIn){
+    <div class="list-horizontal" >
+            <button mat-button class="mat-icon-button" [matMenuTriggerFor]="menu">
+                <mat-icon inline class="profile-button">person</mat-icon>
+                {{email()}}
+            </button>
+        <mat-divider vertical></mat-divider>
+        <app-notifications></app-notifications>
+        </div>
+}
+
+<mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item>Profile</button>
+    <button mat-menu-item (click)="logOut()" style=" --mat-menu-item-hover-state-layer-color: rgba(240,128,128,0.5)">Log-out</button>
+</mat-menu>

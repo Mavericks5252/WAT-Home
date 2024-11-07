@@ -1,0 +1,12 @@
+
+<button mat-icon-button class="mat-icon-button" [matMenuTriggerFor]="menu"> 
+    <mat-icon class="notification-button" matBadge="{{this.notifications}}"> 
+        notifications
+    </mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>Item1</button>
+    <button mat-menu-item>Item2</button>
+</mat-menu>
+
+

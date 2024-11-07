@@ -1,0 +1,9 @@
+.notification-button{
+    line-height: inherit; 
+    vertical-align: inherit;
+    font-size: 24px;
+}
+
+.mat-icon-button{
+    border-radius: 0;
+}
