@@ -68,8 +68,8 @@ export class SignInDialogComponent {
     this.passwordReset = true;
     this.value=1;
   }
-  createAccount(){
-
+  onClose(){
+    this.dialogRef.close();
   }
 
   sendResetLink(){

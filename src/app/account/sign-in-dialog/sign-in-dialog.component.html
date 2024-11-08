@@ -40,6 +40,6 @@
         <button mat-button *ngSwitchDefault class="login-button" (click) ="email && password && login()"><span>Log In</span></button>
         <!-- <span *ngIf="this.passwordReset === true">{{this.passwordReset ? 'Reset Password': 'Log In'}}</span> -->
     </div>
-    <a routerlink="/create-account" class="create-account">Create Account</a>
+    <a routerlink="/create-account" class="create-account" routerLink="/create-account" (click)="onClose()">Create Account</a>
 </mat-dialog-content>
 

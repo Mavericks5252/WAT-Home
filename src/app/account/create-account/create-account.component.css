@@ -1,0 +1,90 @@
+.example-container {
+  width: auto;
+  height: 100%;
+  border: 1px solid #555;
+  /* The background property is added to clearly distinguish the borders between drawer and main
+     content */
+  background: #eee;
+}
+
+
+
+mat-grid-tile {
+  background: var(--af-blue);
+}
+.innerCard{
+    width: 100%;
+    margin-top:5rem;
+    margin-bottom: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    height: 80%;
+}
+.secondCol{
+    background-color: white;
+}
+.createAccountTitle{
+    font-weight: 600;
+    font-size: 36px;
+    color: white;
+    font-family: Inter, sans-serif;
+    margin:0;
+    margin-bottom: 3px;
+}
+.createAccountSubtext{
+    color: #CBD5E0;
+    margin:0;
+}
+
+.homeButton{
+    border: 1px solid var(--af-blue) !important;
+    color: var(--af-blue) !important;
+}
+.homeButton:hover{
+    background-color: var(--af-blue);
+    color:white !important;
+}
+
+.userAccountTitle{
+    font-weight: 600;
+    font-size: 30px;
+    color:black;
+    font-family: Inter, sans-serif;
+    margin:0;
+    margin-bottom: 3px;
+}
+
+.example-card {
+  min-width: 95%;
+  margin-bottom: 8px;
+  min-height: 83%;
+  background-color: transparent;
+  box-shadow: none;
+}
+.userAccountSubtext{
+    color: #718096;
+    margin: 0;
+}
+
+.mat-form-field-label-wrapper {
+    transform: translateY(-20px) !important;
+}
+.mat-form-field-label {
+    transform: translateY(-20px) !important;
+}
+.form{
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.fullSizeForm{
+    max-width: 500px;
+    min-width: 300px;
+    width: 100%;
+}
+.halfSizeForm{
+    max-width: 242.5px;
+    min-width: 140px;
+    width: 45%;
+}

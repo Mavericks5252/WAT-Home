@@ -1,6 +1,55 @@
-<p>this works</p>
+<mat-grid-list cols="8" rowHeight="100vh">
+    <mat-grid-tile colspan="3" class="firstCol">
+        <div class="innerCard" style="height: 80%;"> 
+            <h2 class="createAccountTitle">Create Account</h2>
+            <p class="createAccountSubtext">Create an account to access the portal.</p>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="5" class="secondCol">
+        <mat-card class="example-card">
+            <mat-card-content>
+                <button mat-stroked-button class="homeButton" routerLink="">Home</button>
+                <h2></h2>
+                <h2 class="userAccountTitle">User Account</h2>
+                <p class="userAccountSubtext">Please fill out your personal information below.</p>
+                <form style="margin-top: 30px;">
+                    <div>
+                    <mat-form-field appearance="outline" class="form halfSizeForm">
+                            <mat-label>First Name</mat-label>
+                            <input matInput >
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="form halfSizeForm">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput >
+                    </mat-form-field>
+                    </div>
+                    <mat-form-field appearance="outline" class="form fullSizeForm">
+                            <mat-label>Display Name</mat-label>
+                            <input matInput >
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="form fullSizeForm">
+                            <mat-label>Email</mat-label>
+                            <input matInput >
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="form fullSizeForm">
+                            <mat-label>Password</mat-label>
+                            <input matInput >
+                    </mat-form-field>
+                </form>
+                <button mat-flat-button class="fullSizeForm" (click)="createAccount()">Continue</button>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
 
-<!-- <mat-drawer-container>
-    <mat-drawer mode="side" opened></mat-drawer>
+</mat-grid-list>
+
+<!-- <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <div style="background-color: blue; height:100%">
+            <div style="background-color: red; padding-top: 5rem; padding-bottom: 5rem; padding-left: 4rem; padding-right: 4rem;">
+
+            </div>
+        </div>
+    </mat-drawer>
     <mat-drawer-content></mat-drawer-content>
 </mat-drawer-container> -->
