@@ -9,6 +9,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { MatListModule } from '@angular/material/list';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { SignInDialogComponent } from './sign-in-dialog/sign-in-dialog.component';
+import { RouterLink } from '@angular/router';
 
 
 export interface signInDialogData{
@@ -18,7 +19,7 @@ export interface signInDialogData{
 @Component({
   selector: 'app-account',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, MatBadgeModule, MatMenuModule, CommonModule, MatDividerModule, NotificationsComponent, MatListModule, MatDialogModule, SignInDialogComponent],
+  imports: [MatIconModule, MatButtonModule, MatBadgeModule, MatMenuModule, CommonModule, MatDividerModule, NotificationsComponent, MatListModule, MatDialogModule, SignInDialogComponent,RouterLink],
   templateUrl: './account.component.html',
   styleUrl: './account.component.css',
   changeDetection: ChangeDetectionStrategy.Default,

@@ -24,6 +24,7 @@ import {
 } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 
 export interface signInDialogData{
   email: string,
@@ -40,7 +41,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
   selector: 'app-sign-in-dialog',
   standalone: true,
-  imports: [MatDialogModule,MatButtonModule,MatFormFieldModule, MatInputModule, MatFormFieldModule, ReactiveFormsModule,FormsModule,CommonModule, MatProgressSpinnerModule, MatIconModule],
+  imports: [MatDialogModule,MatButtonModule,MatFormFieldModule, MatInputModule, MatFormFieldModule, ReactiveFormsModule,FormsModule,CommonModule, MatProgressSpinnerModule, MatIconModule, RouterLink],
   templateUrl: './sign-in-dialog.component.html',
   styleUrl: './sign-in-dialog.component.css'
 })

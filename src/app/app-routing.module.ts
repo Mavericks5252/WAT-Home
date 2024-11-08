@@ -7,8 +7,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 const routes: Routes = [
-  { path: 'createaccount', component: CreateAccountComponent },
-  { path: 'home', component: ToolbarComponent},
+  { path: 'create-account', component: CreateAccountComponent },
+  { path: '', component: ToolbarComponent},
 ];
 
 
