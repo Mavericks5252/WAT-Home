@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 
 
 import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule],
+  imports: [ BrowserModule, FormsModule, AppRoutingModule],
 })
 export class AppModule { }
